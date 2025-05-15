@@ -2,6 +2,25 @@ import streamlit as st
 import pdfplumber
 import re
 from collections import defaultdict
+import streamlit as st
+
+# ===== PWA CONFIG =====
+st.set_page_config(
+    page_title="Resume Screener",
+    page_icon="📄",
+    layout="wide"
+)
+
+# Inject PWA meta tags
+st.markdown("""
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000"/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+""", unsafe_allow_html=True)
 
 # Configure the app
 st.set_page_config(page_title="Resume Screener", layout="wide")
